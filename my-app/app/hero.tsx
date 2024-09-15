@@ -8,11 +8,11 @@ import { Button } from "@/components/ui/button"
 import {
   Card,
   CardContent,
-  CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
+import Image from "next/image"
 
 export default function Component() {
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -81,7 +81,7 @@ export default function Component() {
                   style={{ transform: `translateX(-${currentSlide * 100}%)` }}
                 >
                   {slides.map((slide, index) => (
-                    <img
+                    <Image
                       key={index}
                       alt={slide.alt}
                       className="aspect-[2/1] object-contain w-full"
@@ -122,7 +122,7 @@ export default function Component() {
                   <CardTitle>Smart Phone</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <img
+                  <Image
                     alt="Smart Phone"
                     className="aspect-square object-cover rounded-lg"
                     height="200"
@@ -139,7 +139,7 @@ export default function Component() {
                   <CardTitle>Laptop</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <img
+                  <Image
                     alt="Clothing"
                     className="aspect-square object-cover rounded-lg"
                     height="200"
@@ -156,7 +156,7 @@ export default function Component() {
                   <CardTitle>HeadPhones</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <img
+                  <Image
                     alt="Home & Garden"
                     className="aspect-square object-cover rounded-lg"
                     height="200"
